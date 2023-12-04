@@ -1,6 +1,27 @@
+import com.vanniktech.maven.publish.AndroidSingleVariantLibrary
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("com.vanniktech.maven.publish.base") version "0.25.3"
+}
+
+group = "gr.cpaleop"
+version = "1.0.0"
+
+publishing {
+    repositories {
+        mavenLocal()
+    }
+}
+
+mavenPublishing {
+    configure(
+        AndroidSingleVariantLibrary(
+            sourcesJar = true,
+            publishJavadocJar = false,
+        ),
+    )
 }
 
 android {
