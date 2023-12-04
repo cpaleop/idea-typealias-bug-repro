@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "IdeaTypealiasError"
 include(":app")
- 
+include(":lib")
